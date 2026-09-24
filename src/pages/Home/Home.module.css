@@ -1,0 +1,217 @@
+.hero {
+  padding-top: var(--space-8);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.heroTitle em {
+  color: var(--color-accent-pink);
+  font-style: italic;
+}
+
+.heroText {
+  color: var(--color-text-muted);
+  max-width: 46ch;
+  margin-bottom: var(--space-5);
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.stats {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stats strong {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+}
+
+.stats span {
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.heroImageWrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.heroImageWrap img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.heroImageCaption {
+  position: absolute;
+  left: var(--space-4);
+  bottom: var(--space-4);
+  background: rgba(15, 10, 18, 0.75);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  margin: var(--space-3) 0 var(--space-6);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.viewAll {
+  color: var(--color-accent-pink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.universoGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+}
+
+.universoTile {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.universoTile:hover {
+  border-color: var(--color-accent-lilac);
+  transform: translateY(-2px);
+}
+
+.universoNombre {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.universoDescripcion {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.testimonioGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.testimonio {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.testimonioMark {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-accent-pink);
+  line-height: 1;
+}
+
+.testimonio footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+}
+
+.testimonio footer strong {
+  color: var(--color-text);
+}
+
+.ctaBanner {
+  background: linear-gradient(135deg, var(--color-accent-purple), var(--color-surface));
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+}
+
+.ctaBanner h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: var(--space-3);
+}
+
+.ctaBanner p {
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-bottom: var(--space-5);
+}
+
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardGrid,
+  .testimonioGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .universoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cardGrid,
+  .testimonioGrid,
+  .universoGrid {
+    grid-template-columns: 1fr;
+  }
+}

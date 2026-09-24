@@ -1,0 +1,115 @@
+[
+  {
+    "id": "ia-aprende-de-ti",
+    "universo": "Tecnología",
+    "fuente": "Entrepreneur en Español",
+    "tiempoLectura": "1 hora",
+    "titulo": "La inteligencia artificial aprende de ti, incluso cuando te equivocas",
+    "resumen": "La inteligencia artificial (IA) no se entrena sola. Aunque los algoritmos sean complejos y los servidores gigantescos, al final, la materia prima proviene de...",
+    "imagen": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "La inteligencia artificial (IA) no se entrena sola. Aunque los algoritmos sean complejos y los servidores gigantescos, al final, la materia prima proviene de millones de personas que charlan, corrigen, comentan y opinan.",
+      "En esa interacción, herramientas como ChatGPT o Gemini aprenden a responder mejor y absorben lo que sus usuarios piensan, creen o incluso malinterpretan. Actualmente, los asistentes basados en grandes modelos de lenguaje se integran de forma acelerada a rutinas laborales, tareas académicas y búsquedas personales.",
+      "La tecnología conocida como aprendizaje reforzado por retroalimentación humana (RLHF, por sus siglas en inglés) permite que estos sistemas ajusten su desempeño cada vez que un usuario les indica si una respuesta fue útil o no.",
+      "Ese ajuste depende del criterio del humano que evalúa. La IA refleja lo que recibe, no lo que necesariamente es correcto."
+    ]
+  },
+  {
+    "id": "poblamiento-sumapaz",
+    "universo": "Turismo",
+    "fuente": "Gobernación de Bogotá",
+    "tiempoLectura": "5 min",
+    "titulo": "Historia del poblamiento de Sumapaz",
+    "resumen": "La historia de Sumapaz se remonta al periodo precolombino. Los páramos aledaños a la sabana de Bogotá estuvieron ocupados por el grupo lingüístico...",
+    "imagen": "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "La historia de Sumapaz se remonta al periodo precolombino. Los páramos aledaños a la sabana de Bogotá estuvieron ocupados por el grupo lingüístico muisca, que consideraba estas lagunas de alta montaña como sitios sagrados.",
+      "Con el paso de los siglos, el páramo se convirtió en corredor de paso entre el altiplano cundiboyacense y los Llanos Orientales, dejando huellas de caminos ancestrales que hoy siguen los senderistas.",
+      "Hoy en día, Sumapaz es el páramo más grande del mundo y una reserva estratégica de agua para millones de personas en la región."
+    ]
+  },
+  {
+    "id": "arte-salud-mental",
+    "universo": "Arte",
+    "fuente": "National Geographic",
+    "tiempoLectura": "23 horas",
+    "titulo": "¿Cómo puede ayudar el arte a mejorar la salud mental?",
+    "resumen": "Los estudios de la OMS indican que escuchar música, bailar, ir al teatro o a un museo pueden tener beneficios duraderos para la salud emocional, además de generar...",
+    "imagen": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "Los estudios de la OMS indican que escuchar música, bailar, ir al teatro o a un museo pueden tener beneficios duraderos para la salud emocional, además de generar espacios de conexión social.",
+      "Participar activamente en una disciplina artística, incluso sin formación previa, reduce marcadores de estrés y mejora la percepción subjetiva de bienestar.",
+      "Cada vez más sistemas de salud incorporan programas de 'arte por prescripción', donde médicos recomiendan actividades creativas como parte de un tratamiento integral."
+    ]
+  },
+  {
+    "id": "microcredencial-programacion",
+    "universo": "Educación",
+    "fuente": "Politécnico Grancolombiano",
+    "tiempoLectura": "8 min",
+    "titulo": "Microcredenciales: la nueva forma de aprender a programar",
+    "resumen": "Cada vez más estudiantes combinan carreras tradicionales con cursos cortos y certificables que se ajustan a la velocidad con la que cambia la tecnología...",
+    "imagen": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "Cada vez más estudiantes combinan carreras tradicionales con cursos cortos y certificables que se ajustan a la velocidad con la que cambia la tecnología.",
+      "Las microcredenciales permiten validar una habilidad específica —como Front-end o análisis de datos— en semanas, no en semestres, sin reemplazar el título profesional.",
+      "Para muchos empleadores, este tipo de certificaciones ya pesan tanto como la experiencia laboral a la hora de evaluar un perfil junior."
+    ]
+  },
+  {
+    "id": "negocios-locales-rionegro",
+    "universo": "Comercio",
+    "fuente": "Cámara de Comercio del Oriente Antioqueño",
+    "tiempoLectura": "6 min",
+    "titulo": "El resurgir de los negocios de barrio en Rionegro",
+    "resumen": "Tiendas de más de treinta años reinventan su forma de vender sin perder lo que las hizo entrañables para su vecindario...",
+    "imagen": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "Tiendas de más de treinta años reinventan su forma de vender sin perder lo que las hizo entrañables para su vecindario: el fiado de confianza, el saludo por el nombre, la recomendación honesta.",
+      "Muchas incorporan catálogos por WhatsApp y domicilios propios, pero mantienen el mostrador como el verdadero corazón del negocio.",
+      "El resultado es un comercio híbrido: parte digital, parte memoria de barrio."
+    ]
+  },
+  {
+    "id": "codigo-abierto-comunidad",
+    "universo": "Tecnología",
+    "fuente": "Developers Colombia",
+    "tiempoLectura": "10 min",
+    "titulo": "Lo que aprendí contribuyendo a mi primer proyecto de código abierto",
+    "resumen": "Abrir un pull request por primera vez da vértigo, pero es una de las formas más rápidas de aprender a trabajar en equipo con código real...",
+    "imagen": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "Abrir un pull request por primera vez da vértigo, pero es una de las formas más rápidas de aprender a trabajar en equipo con código real.",
+      "Leer issues etiquetados como 'good first issue' es el punto de entrada más amable: son tareas acotadas, bien documentadas y pensadas para quien recién llega.",
+      "Recibir una revisión de código de alguien que nunca has visto en persona, y responder con calma, termina siendo una lección de comunicación tan grande como una de programación."
+    ]
+  },
+  {
+    "id": "senderismo-cocora",
+    "universo": "Turismo",
+    "fuente": "Fondo de Promoción Turística del Quindío",
+    "tiempoLectura": "4 min",
+    "titulo": "Un día caminando entre las palmas de cera del Valle de Cocora",
+    "resumen": "Entre niebla y palmas que superan los cincuenta metros, esta caminata recuerda por qué vale la pena madrugar...",
+    "imagen": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "Entre niebla y palmas que superan los cincuenta metros, esta caminata recuerda por qué vale la pena madrugar.",
+      "El circuito completo combina bosque de niebla, cruces de río sobre puentes colgantes y, si el clima acompaña, la posibilidad de ver un loro orejiamarillo.",
+      "El consejo local es simple: llevar impermeable aunque salga el sol, porque en Cocora el clima cambia en minutos."
+    ]
+  },
+  {
+    "id": "arte-callejero-comercio",
+    "universo": "Arte",
+    "fuente": "Revista Arcadia",
+    "tiempoLectura": "7 min",
+    "titulo": "Cuando el arte callejero se convierte en motor de comercio local",
+    "resumen": "Murales que empezaron como protesta hoy atraen visitantes, cafés y rutas guiadas en varios barrios del país...",
+    "imagen": "https://images.unsplash.com/photo-1509024484861-05d0b6f18ee9?auto=format&fit=crop&w=900&q=80",
+    "contenido": [
+      "Murales que empezaron como protesta hoy atraen visitantes, cafés y rutas guiadas en varios barrios del país.",
+      "Colectivos de artistas negocian directamente con propietarios de locales, cambiando fachadas por visibilidad y, en algunos casos, por un pago simbólico.",
+      "El efecto secundario es económico: donde hay mural reconocido, aparecen negocios pequeños que viven de quienes llegan a fotografiarlo."
+    ]
+  }
+]
