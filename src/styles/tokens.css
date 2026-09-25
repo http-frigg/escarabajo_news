@@ -1,36 +1,38 @@
-:root {
-  /* Backgrounds */
-  --color-bg: #17111d;
-  --color-bg-alt: #1f1726;
-  --color-surface: #241b2c;
-  --color-surface-hover: #2c2135;
-  --color-footer: #2c2035;
+@theme {
+  /* Backgrounds — pixel-sampled from the Figma PDF export (mode color over large
+     flat regions, cross-checked against the already-verified --color-footer, so
+     not a PDF colorspace artifact). The real page bg is a neutral warm charcoal,
+     not the purple these used to be. */
+  --color-bg: #2b2a28;
+  --color-bg-alt: #3c2d3e; /* intentionally == --color-footer: Figma reuses the header/footer purple as the one alternating section band ("Cinco universos") and at reduced opacity for callout boxes */
+  --color-surface: #1d1a1a; /* darker than --color-bg, not lighter — panels (form containers, tip boxes) sit as a darker layer in Figma, the opposite of the old purple-tinted value */
+  --color-surface-hover: #272422;
+  --color-footer: #3c2d3e; /* pixel-sampled from Figma's actual header export */
 
   /* Accents */
   --color-accent-pink: #e3a9dd;
   --color-accent-pink-strong: #d98fd0;
   --color-accent-lilac: #c9a3e0;
-  --color-accent-purple: #6f5285;
 
   /* Text */
   --color-text: #f6f2f8;
   --color-text-muted: #b7a7c2;
   --color-text-faint: #8a7a94;
-  --color-border: #392c44;
+  --color-border: #4a4542; /* neutral warm gray in Figma, not purple-tinted */
 
   /* Typography */
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Plus Jakarta Sans", "Segoe UI", sans-serif;
 
-  /* Spacing scale */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2rem;
-  --space-7: 3rem;
-  --space-8: 4.5rem;
+  /* Spacing scale (overrides Tailwind's default 1/2/3/4/5/6/7/8 to match the design) */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+  --spacing-7: 3rem;
+  --spacing-8: 4.5rem;
 
   /* Radii & shadow */
   --radius-sm: 0.5rem;
@@ -38,7 +40,4 @@
   --radius-lg: 1.5rem;
   --radius-pill: 999px;
   --shadow-card: 0 20px 40px -24px rgba(0, 0, 0, 0.6);
-
-  /* Layout */
-  --max-width: 1180px;
 }

@@ -1,5 +1,3 @@
-import styles from "./FormField.module.css";
-
 export function FormField({
   label,
   name,
@@ -16,8 +14,10 @@ export function FormField({
   const fieldId = `field-${name}`;
 
   return (
-    <div className={styles.field}>
-      <label htmlFor={fieldId}>{label}</label>
+    <div className="flex flex-col gap-2">
+      <label htmlFor={fieldId} className="text-text-muted text-[0.85rem] font-semibold">
+        {label}
+      </label>
       <Tag
         id={fieldId}
         name={name}
@@ -26,13 +26,15 @@ export function FormField({
         onChange={onChange}
         onBlur={onBlur}
         placeholder={placeholder}
-        className={`${styles.control} ${error ? styles.controlError : ""}`}
+        className={`bg-bg text-text font-body focus:border-accent-pink rounded-sm border px-4 py-3 text-[0.95rem] resize-y focus:outline-none ${
+          error ? "border-[#e08a8a]" : "border-border"
+        }`}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${fieldId}-error` : undefined}
         {...rest}
       />
       {error && (
-        <p id={`${fieldId}-error`} className={styles.error}>
+        <p id={`${fieldId}-error`} className="text-[0.8rem] text-[#f0a8a8]">
           {error}
         </p>
       )}

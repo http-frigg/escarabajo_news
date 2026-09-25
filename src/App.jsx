@@ -27,7 +27,7 @@ export default function App() {
       <FavoritesProvider>
         <ScrollToTop />
         <Header />
-        <main>
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explorar" element={<Explorar />} />

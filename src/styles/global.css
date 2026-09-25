@@ -1,108 +1,86 @@
+@import "tailwindcss";
 @import "./tokens.css";
 
-* {
-  box-sizing: border-box;
+/* Base resets must live in @layer base (not as bare/unlayered rules) — unlayered
+   CSS always beats layered CSS in the cascade, regardless of source order, so a
+   bare `p { margin: 0 }` here would silently defeat every `mb-*`/`mt-*` utility
+   on every <p> in the app (this bit us once already, for `.container`/`.eyebrow`/
+   `.section`, and again for these resets — hence this comment). */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-bg text-text font-body antialiased;
+    line-height: 1.6;
+  }
+
+  #root {
+    @apply flex min-h-screen flex-col;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-heading font-semibold;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+/* Named `page-container` (not `container`) because Tailwind v4 ships its own
+   built-in `.container` utility — reusing that name would silently lose to it
+   since built-in utilities live in the (later) utilities layer.
+   @layer components sits before Tailwind's utilities layer, so a page-specific
+   utility override (e.g. max-w-[760px] on an element that also has
+   `page-container`) still wins over these shared classes. */
+@layer components {
+  .page-container {
+    @apply mx-auto w-full max-w-[1180px] px-4 sm:px-5;
+  }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.15;
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--space-5);
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-accent-pink);
-  font-weight: 600;
-}
-
-.section {
-  padding: var(--space-8) 0;
-}
-
-.section--alt {
-  background: var(--color-bg-alt);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
-main {
-  flex: 1;
-}
-
-@media (max-width: 640px) {
-  .container {
-    padding: 0 var(--space-4);
+  .eyebrow {
+    @apply text-accent-pink inline-flex items-center gap-2 text-xs font-semibold uppercase;
+    letter-spacing: 0.14em;
   }
 
   .section {
-    padding: var(--space-7) 0;
+    @apply py-7 sm:py-8;
+  }
+
+  .section--alt {
+    @apply bg-bg-alt;
   }
 }

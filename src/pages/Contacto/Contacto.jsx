@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FormField } from "../../components/FormField/FormField.jsx";
 import { Button } from "../../components/Button/Button.jsx";
-import styles from "./Contacto.module.css";
 
 const initialValues = { nombre: "", correo: "", mensaje: "" };
 
@@ -54,37 +53,50 @@ export function Contacto() {
 
   return (
     <section className="section">
-      <div className="container">
+      <div className="page-container">
         <span className="eyebrow">Hablemos</span>
-        <h1 className={styles.title}>Contacto</h1>
-        <p className={styles.subtitle}>
+        <h1 className="my-3 mb-4 text-[clamp(2rem,4vw,2.8rem)]">Contacto</h1>
+        <p className="text-text-muted border-border mb-6 max-w-[60ch] border-b pb-6">
           ¿Tienes una idea, una historia o una pregunta? Escríbenos y te respondemos con la misma
           calma con la que hacemos la revista.
         </p>
 
-        <div className={styles.grid}>
+        <div className="grid grid-cols-[1fr_1.2fr] gap-7 max-[900px]:grid-cols-1">
           <div>
-            <h2 className={styles.asideTitle}>Otras formas de encontrarnos</h2>
-            <ul className={styles.channelList}>
+            <h2 className="mb-5 text-[1.3rem]">Otras formas de encontrarnos</h2>
+            <ul className="mb-5 flex flex-col gap-4">
               {canales.map((canal) => (
-                <li key={canal.etiqueta}>
-                  <span aria-hidden="true">{canal.icono}</span>
+                <li key={canal.etiqueta} className="flex items-start gap-3">
+                  <span
+                    className="bg-bg-alt inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-pill"
+                    aria-hidden="true"
+                  >
+                    {canal.icono}
+                  </span>
                   <div>
-                    <p className={styles.channelLabel}>{canal.etiqueta}</p>
+                    <p className="text-text-faint mb-[0.15rem] text-[0.7rem] tracking-[0.08em] uppercase">
+                      {canal.etiqueta}
+                    </p>
                     <p>{canal.valor}</p>
                   </div>
                 </li>
               ))}
             </ul>
 
-            <div className={styles.note}>
+            <div className="bg-bg-alt/70 flex flex-col gap-1 rounded-md p-4">
               <strong>Hecho con curiosidad</strong>
-              <p>Nos tomamos el tiempo de leer cada mensaje de forma individual. Sin respuestas automáticas.</p>
+              <p className="text-[0.85rem] text-white/85">
+                Nos tomamos el tiempo de leer cada mensaje de forma individual. Sin respuestas automáticas.
+              </p>
             </div>
           </div>
 
-          <form className={styles.form} onSubmit={handleSubmit} noValidate>
-            <h2 className={styles.formTitle}>Envíanos un mensaje</h2>
+          <form
+            className="bg-surface border-border flex flex-col gap-4 rounded-lg border p-6"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            <h2 className="mb-1 text-[1.2rem]">Envíanos un mensaje</h2>
 
             <FormField
               label="Nombre"
@@ -114,12 +126,15 @@ export function Contacto() {
               placeholder="Escríbenos tu idea, pregunta o experiencia..."
             />
 
-            <Button as="button" type="submit" variant="primary" className={styles.submit}>
+            <Button as="button" type="submit" variant="primary" className="mt-2 w-full">
               Enviar mensaje ➤
             </Button>
 
             {enviado && (
-              <p className={styles.confirmation} role="status">
+              <p
+                className="rounded-sm border border-[#9ee0b0]/30 bg-[#9ee0b0]/10 p-3 text-center text-[0.9rem] text-[#9ee0b0]"
+                role="status"
+              >
                 ¡Gracias! Tu mensaje fue recibido, te responderemos pronto.
               </p>
             )}

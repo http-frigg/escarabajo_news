@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import { useExperiencias } from "../../context/ExperienciasContext.jsx";
 import { useFavorites } from "../../context/FavoritesContext.jsx";
 import { Button } from "../../components/Button/Button.jsx";
-import styles from "./Detalle.module.css";
 
 export function Detalle() {
   const { id } = useParams();
@@ -13,8 +12,8 @@ export function Detalle() {
   if (!experiencia) {
     return (
       <section className="section">
-        <div className="container">
-          <p className={styles.notFound}>Esta experiencia ya no está disponible.</p>
+        <div className="page-container">
+          <p className="text-text-muted mb-4">Esta experiencia ya no está disponible.</p>
           <Button to="/explorar" variant="secondary">
             Volver a explorar
           </Button>
@@ -27,16 +26,18 @@ export function Detalle() {
 
   return (
     <section className="section">
-      <div className={`container ${styles.container}`}>
-        <Link to="/explorar" className={styles.back}>
+      <div className="page-container max-w-[760px]">
+        <Link to="/explorar" className="text-text-muted hover:text-text mb-5 inline-block text-[0.85rem]">
           ← Explorar
         </Link>
 
-        <div className={styles.headerRow}>
+        <div className="mb-3 flex items-center justify-between">
           <span className="eyebrow">{experiencia.universo}</span>
           <button
             type="button"
-            className={`${styles.favButton} ${favorito ? styles.favActive : ""}`}
+            className={`bg-surface inline-flex h-10 w-10 items-center justify-center rounded-pill border text-[1.2rem] ${
+              favorito ? "text-accent-pink border-accent-pink" : "text-text border-border"
+            }`}
             onClick={() => toggleFavorite(experiencia.id)}
             aria-pressed={favorito}
             aria-label={favorito ? "Quitar de favoritos" : "Guardar en favoritos"}
@@ -45,17 +46,21 @@ export function Detalle() {
           </button>
         </div>
 
-        <h1 className={styles.title}>{experiencia.titulo}</h1>
-        <p className={styles.summary}>{experiencia.resumen}</p>
+        <h1 className="mb-4 text-[clamp(2rem,4vw,2.6rem)]">{experiencia.titulo}</h1>
+        <p className="text-text-muted mb-4 text-[1.05rem]">{experiencia.resumen}</p>
 
-        <div className={styles.meta}>
+        <div className="text-text-faint border-border mb-5 flex gap-5 border-b pb-5 text-[0.8rem]">
           <span>{experiencia.fuente}</span>
           <span>{experiencia.tiempoLectura}</span>
         </div>
 
-        <img src={experiencia.imagen} alt="" className={styles.image} />
+        <img
+          src={experiencia.imagen}
+          alt=""
+          className="mb-6 aspect-video w-full rounded-md object-cover"
+        />
 
-        <div className={styles.body}>
+        <div className="text-text flex flex-col gap-4 text-base">
           {experiencia.contenido.map((parrafo, index) => (
             <p key={index}>{parrafo}</p>
           ))}

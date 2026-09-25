@@ -1,6 +1,6 @@
 # Escarabajo News
 
-Prototipo funcional (Entrega 2 — Módulo Front End) construido con React + Vite.
+Prototipo funcional construido con React + Vite.
 
 ## Requisitos
 
